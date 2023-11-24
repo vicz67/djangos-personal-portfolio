@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <h1>Blog</h1>
+    <h2>Vic has written {{ projectsblog.count }} blogs</h2>
+    {% for project in projectsblog %}
+        <a href = "{% url 'blog:detail' project.id %}"><h2>{{ project.title }}</h2></a>
+        <h2>{{ project.datatime }}</h2>
+        <p>{{ project.description }}</p>
+    {% endfor %}
+
+</head>
+<body>
+
+</body>
+</html>
